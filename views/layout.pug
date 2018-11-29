@@ -1,7 +1,39 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title Style Market
+    link(rel='stylesheet', href='/bower-components/bootstrap/dist/css/bootstrap.css')
   body
-    block content
+      //header
+      .d-flex.flex-column.flex-md-row.align-items-center.p-2.px-md-2.mb-3.bg-dark.shadow-sm.fixed-top
+        a.my-0.mx.mx-2.mr-md-auto.navbar-brand.text-white(href='./') Style Market
+        nav.my-2.my-md-0.mr-md-1
+          a.p-2.text-white.navbar-brand(href='./search') How this works
+          a.p-2.text-white.navbar-brand(href='#') Sign up
+        a.btn.btn-outline-success.active(href='#') LOG IN
+
+      //site body content
+      block content
+
+
+
+  nav.p-1.navbar.fixed-bottom.navbar-expand-sm.navbar-dark.bg-dark
+
+        #navbarCollapse.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item.active
+              a.nav-link.mx-4 Copyrights @ Style Market | 2018
+            li.nav-item.mx-4
+              a.nav-link(href='#') Help
+            li.nav-item
+              a.nav-link(href='#') FAQ
+            li.nav-item
+              a.nav-link(href='#') Customer Service
+            li.nav-item
+              a.nav-link(href='#') Contact us
+            li.nav-item
+              a.nav-link(href='#') Terms and Conditions
+
+
+
+

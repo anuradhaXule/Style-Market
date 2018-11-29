@@ -3,6 +3,15 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+footer {
+  align-items: center;
+  align-content: center;
+  alignment: center;
+}
+
 a {
   color: #00B7FF;
+  margin-right: 50px;
+  align-content:center;
+  align-items: center;
 }
