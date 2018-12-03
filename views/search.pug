@@ -1,7 +1,15 @@
 extends layout
 
 block content
-    .container.my-5.py-4.mx-2
-        h1= title
-        p This is the advanced search tab
-        button add
+
+    .container-split
+        .split.left(style='height:100%; width:50%; left:0; background-color: #111;')
+            .centered
+                img(src='img_avatar2.png', alt='Avatar woman')
+                h2 Jane Flex
+                p Some text.
+        .split.right(style='height:100%; width:50%: right:0; background-color: #101;')
+            .centered
+                img(src='img_avatar.png', alt='Avatar man')
+                h2 John Doe
+                p Some text here too.
