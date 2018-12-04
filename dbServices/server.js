@@ -13,12 +13,6 @@ app.use(bodyParser.json());
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-app.get('/', (req,res) =>{
-    Stylist.findAll({
-        include: [
-            {model.}
-        ]
-    })
-})
+
 
 app.listen(8080,()=>console.log('Listing to port 8080'));
