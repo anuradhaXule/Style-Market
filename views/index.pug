@@ -14,11 +14,7 @@ block content
                 option(value='2') Colombo
                 option(value='3') Galle
             .input-group-append
-            select#inputGroupSelect04.custom-select
-                option(selected='') When?
-                option(value='1') 1
-                option(value='2') 2
-                option(value='3') 3
+
             .input-group-append
             select#inputGroupSelect04.custom-select
                 option(selected='') Required session length?
@@ -41,11 +37,7 @@ block content
                 option(value='2') Colombo
                 option(value='3') Galle
             .input-group-append
-            select#inputGroupSelect04.custom-select
-                option(selected='') When?
-                option(value='1') 1
-                option(value='2') 2
-                option(value='3') 3
+                input(type='date', name='date')#inputGroupSelect04.custom-select
             .input-group-append
             select#inputGroupSelect04.custom-select
                 option(selected='') Required session length?
@@ -53,7 +45,7 @@ block content
                 option(value='2') Half day-Morning
                 option(value='3') Half day-Evening
             .input-group-append
-                button.btn.btn-primary.active(type='button') Find
+                button.btn.btn-primary.w-100(type='submit') Find
 
     .jumbotron.p-3.p-md-5.text-white.bg-info.rounded-0
         .col-md-6.px-0
