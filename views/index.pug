@@ -23,29 +23,34 @@ block content
                 option(value='3') Half day-Evening
             .input-group-append
                 button.btn.btn-primary.active(type='button') Find
+
+
+
+
     .d-flex.flex-column.flex-md-row.align-items-center.p-2.px-md-2.mb-3.bg-gray.border-bottom.shadow-sm.h-md-250
-        .input-group
-            select#inputGroupSelect04.custom-select
-                option(selected='') What type of freelancer?
-                option(value='1') Hair stylist
-                option(value='2') Style Educator
-                option(value='3') Assistant
-            .input-group-append
-            select#inputGroupSelect04.custom-select
-                option(selected='') Which location?
-                option(value='1') Kandy
-                option(value='2') Colombo
-                option(value='3') Galle
-            .input-group-append
-                input(type='date', name='date')#inputGroupSelect04.custom-select
-            .input-group-append
-            select#inputGroupSelect04.custom-select
-                option(selected='') Required session length?
-                option(value='1') Full day
-                option(value='2') Half day-Morning
-                option(value='3') Half day-Evening
-            .input-group-append
-                button.btn.btn-primary.w-100(type='submit') Find
+        form.form-find(action='../search', method="post")
+            .input-group
+                select#inputGroupSelect04.custom-select.w-25
+                    option(selected='') What type of freelancer?
+                    option(value='1') Hair stylist
+                    option(value='2') Style Educator
+                    option(value='3') Assistant
+                .input-group-append
+                select#inputGroupSelect04.custom-select.mx-2.w-auto
+                    option(selected='') Which location?
+                    option(value='1') Kandy
+                    option(value='2') Colombo
+                    option(value='3') Galle
+                .input-group-append
+                    input(type='date', name='date')#inputGroupSelect04.custom-select.mx-2.rounded-0
+                .input-group-append
+                select#inputGroupSelect04.custom-select.mx-2.w-auto
+                    option(selected='') Session length?
+                    option(value='1') Full day
+                    option(value='2') Half day-Morning
+                    option(value='3') Half day-Evening
+                .input-group-append
+                    button.btn.btn-primary.w-100.w-25(type='submit') Find
 
     .jumbotron.p-3.p-md-5.text-white.bg-info.rounded-0
         .col-md-6.px-0
@@ -54,9 +59,9 @@ block content
                 | Style market is the most popular freelancing platform for stylists. Stylists can get registered here and salon owners can book stylists according to there needs easily.
             .btn-group
                 .btn
-                    button.btn.btn-primary.active(type='button') I'm a Salon owner
+                    button.btn.btn-primary.active(onclick="window.location.href='/howthis'") I'm a Salon Owner
                 .btn
-                    button.btn.btn-primary.active(type='button') I'm a Stylist
+                    button.btn.btn-primary.active(onclick="window.location.href='/howthis'") I'm a Stylist
     .card-group
         .card(style='width: 25%;')
             img.card-img-top(src='/images/search.jpg', alt='Card image cap', style='height:25px,width:25px')
@@ -64,27 +69,27 @@ block content
                 h5.card-title Find Stylists
                 p.card-text
                     | Search and find your best match
-                button.btn.btn-default.active(type='button') More
+                button.btn.btn-success.active(onclick="window.location.href='/howthis'") Read more
         .card(style='width: 25%;')
             img.card-img-top(src='/images/stylist.jpg', alt='Card image cap')
             .card-body
                 h5.card-title Make Booking
                 p.card-text You can make booking just in one click
-                button.btn.btn-default.active(type='button') More
+                button.btn.btn-success.active(onclick="window.location.href='/howthis'") Read more
         .card(style='width: 25%;')
             img.card-img-top(src='/images/camera.jpg', alt='Card image cap')
             .card-body
                 h5.card-title Job Opportunities
                 p.card-text
                     | Thousands of freelance job opportunities
-                button.btn.btn-default.active(type='button') More
+                button.btn.btn-success.active(onclick="window.location.href='/howthis'") Read more
         .card(style='width: 25%;')
             img.card-img-top(src='/images/earn.jpg', alt='Card image cap')
             .card-body
                 h5.card-title Earn Money
                 p.card-text
                     | Start earn by today with Style Market
-                button.btn.btn-default.active(type='button') More
+                button.btn.btn-success.active(onclick="window.location.href='/howthis'") Read more
 
     .d-flex.flex-column.flex-md-row.align-items-center.p-4.px-md-2.mb-3.bg-gray.border-bottom.shadow-sm.h-md-250.border-top
         h3(style='marginTop:10px').mx-4 Top Rated Style Marketers
@@ -126,6 +131,32 @@ block content
                     | Search and find your best match
 
                 button.btn.btn-default.active(type='button') More
+    #accordion
+        .card
+            #headingOne.card-header
+                h5.mb-0
+                    button.btn.btn-link(data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                        | Quetion 1
+            #collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#accordion')
+                .card-body
+                    | Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer
+        .card
+            #headingTwo.card-header
+                h5.mb-0
+                    button.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                        | Quetion 2
+            #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordion')
+                .card-body
+                    | Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer
+        .card
+            #headingThree.card-header
+                h5.mb-0
+                    button.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                        | Quetion 3
+            #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordion')
+                .card-body
+                    | Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer Answer
+
 
     .d-flex.flex-column.flex-md-row.align-items-center.p-4.px-md-2.mb-3.bg-gray.border-bottom.shadow-sm.h-md-250.border-top
 

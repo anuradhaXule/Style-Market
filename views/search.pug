@@ -3,28 +3,29 @@ extends layout
 block content
 
     .d-flex.flex-column.flex-md-row.align-items-center.p-2.px-md-2.mb-3.bg-gray.border-bottom.shadow-sm.h-md-250
-        .input-group
-            select#inputGroupSelect04.custom-select
-                option(selected='') What type of freelancer?
-                option(value='1') Hair stylist
-                option(value='2') Style Educator
-                option(value='3') Assistant
-            .input-group-append
-            select#inputGroupSelect04.custom-select
-                option(selected='') Which location?
-                option(value='1') Kandy
-                option(value='2') Colombo
-                option(value='3') Galle
-            .input-group-append
+        form
+            .input-group
+                select#inputGroupSelect04.custom-select
+                    option(selected='') What type of freelancer?
+                    option(value='1') Hair stylist
+                    option(value='2') Style Educator
+                    option(value='3') Assistant
+                .input-group-append
+                select#inputGroupSelect04.custom-select
+                    option(selected='') Which location?
+                    option(value='1') Kandy
+                    option(value='2') Colombo
+                    option(value='3') Galle
+                .input-group-append
 
-            .input-group-append
-            select#inputGroupSelect04.custom-select
-                option(selected='') Required session length?
-                option(value='1') Full day
-                option(value='2') Half day-Morning
-                option(value='3') Half day-Evening
-            .input-group-append
-                button.btn.btn-primary.w-25(type='submit') Find
+                .input-group-append
+                select#inputGroupSelect04.custom-select
+                    option(selected='') Required session length?
+                    option(value='1') Full day
+                    option(value='2') Half day-Morning
+                    option(value='3') Half day-Evening
+                .input-group-append
+                    button.btn.btn-primary.w-25(type='submit') Find
 
 
     .container.my-4.p-2.mx-0

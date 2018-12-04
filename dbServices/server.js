@@ -15,10 +15,10 @@ app.set('view engine', 'handlebars');
 
 app.get('/', (req,res) =>{
     Stylist.findAll({
-        include:[Location]
-    }).then(stylists => {
-        res.render('')
-    });
+        include: [
+            {model.}
+        ]
+    })
 })
 
 app.listen(8080,()=>console.log('Listing to port 8080'));

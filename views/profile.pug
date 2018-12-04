@@ -1,1 +1,26 @@
 extends layout
+
+block content
+    .container.my-5.p-2.mx-0
+        .row
+            .col-sm-12.w-100
+
+                        form
+                            .form-group.my-4
+                                .row
+                                    .col-sm-6
+                                        input#exampleInputPassword1.form-control(type='number', placeholder='Minimum')
+                                    .col-sm-6
+                                        input#exampleInputPassword1.form-control(type='number', placeholder='Maximum')
+                                    .col-sm-6
+                                        input#exampleInputPassword1.form-control(type='date', placeholder='Minimum')
+                                    .col-sm-6
+                                        input#exampleInputPassword1.form-control(type='number', placeholder='Maximum')
+
+
+
+
+
+                            button.btn.btn-primary.w-100.my-4(type='submit') Submit
+
+
