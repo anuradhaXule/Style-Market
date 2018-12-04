@@ -3,15 +3,15 @@ extends layout
 block content
 
     .d-flex.flex-column.flex-md-row.align-items-center.p-2.px-md-2.mb-3.bg-gray.border-bottom.shadow-sm.h-md-250
-        form
+        form(action='/adv-search', method='post')
             .input-group
-                select#inputGroupSelect04.custom-select
+                select(name='sty-type')#inputGroupSelect04.custom-select
                     option(selected='') What type of freelancer?
                     option(value='1') Hair stylist
                     option(value='2') Style Educator
                     option(value='3') Assistant
                 .input-group-append
-                select#inputGroupSelect04.custom-select
+                select(name='location')#inputGroupSelect04.custom-select
                     option(selected='') Which location?
                     option(value='1') Kandy
                     option(value='2') Colombo
@@ -19,7 +19,7 @@ block content
                 .input-group-append
 
                 .input-group-append
-                select#inputGroupSelect04.custom-select
+                select(name='sessionl')#inputGroupSelect04.custom-select
                     option(selected='') Required session length?
                     option(value='1') Full day
                     option(value='2') Half day-Morning
@@ -28,20 +28,20 @@ block content
                     button.btn.btn-primary.w-25(type='submit') Find
 
 
-    .container.my-4.p-2.mx-0
+    .container.my-1.p-2.mx-0.position-fixed
         .row
             .col-sm-4.w-25
                 form
                     .form-group
                         h6 Stylist Type
-                        select#inputGroupSelect04.custom-select
+                        select(name='stylist-type')#inputGroupSelect04.custom-select
                             option(selected='') What type of freelancer?
                             option(value='1') Hair stylist
                             option(value='2') Style Educator
                             option(value='3') Assistant
                     .form-group
                         h6 Location
-                        select#inputGroupSelect04.custom-select
+                        select(name='location')#inputGroupSelect04.custom-select
                             option(selected='') Which location?
                             option(value='1') Kandy
                             option(value='2') Colombo
@@ -51,14 +51,14 @@ block content
                         input(type='date', name='date')#inputGroupSelect04.custom-select
                     .form-group
                         h6 Session Length
-                        select#inputGroupSelect04.custom-select
+                        select(name='session-length')#inputGroupSelect04.custom-select
                             option(selected='') Required session length?
                             option(value='1') Full day
                             option(value='2') Half day-Morning
                             option(value='3') Half day-Evening
                     .form-group
                         h6 Skill
-                        select#inputGroupSelect04.custom-select
+                        select(name='skill')#inputGroupSelect04.custom-select
                             option(selected='') Required session skill?
                             option(value='1') Hair Cuts
                             option(value='2') Teaching
@@ -67,19 +67,19 @@ block content
                         h6 Payment Rate
                         .row
                             .col-sm-6
-                                input#exampleInputPassword1.form-control(type='number', placeholder='Minimum')
+                                input#exampleInputPassword1.form-control(type='number', placeholder='Minimum', name='min')
                             .col-sm-6
-                                input#exampleInputPassword1.form-control(type='number', placeholder='Maximum')
+                                input#exampleInputPassword1.form-control(type='number', placeholder='Maximum', name='max')
                     .form-group
                         h6 Gender
-                        select#inputGroupSelect04.custom-select
+                        select(name='gender')#inputGroupSelect04.custom-select
                             option(selected='') Gender?
                             option(value='1') Male
                             option(value='2') Female
                             option(value='3') Any
                     .form-group
                         h6 Experienced
-                        select#inputGroupSelect04.custom-select
+                        select(name='experience-level')#inputGroupSelect04.custom-select
                             option(selected='') Experienced level?
                             option(value='1') Qualified
                             option(value='2') Average qualified
@@ -98,17 +98,29 @@ block content
                     button.btn.btn-primary.w-100.my-4(type='submit') Submit
 
 
-            .col-sm-8.w-75
-                .row
-                    .card.col-md-16.p-3
-                        .row
-                            .col-md-4
-                                img.h-100.w-100(src='./images/avatar.jpeg')
-                            .col-md-8
-                                .card-block
-                                    h6.card-title Card Title
-                                    p.card-text.text-justify
-                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    a.btn.btn-primary(href='https://www.google.com') read more...
+                .col-sm-8.w-75
+                    .row
+                        .card.col-md-16.p-3
+                            .row
+                                .col-md-4
+                                    img.h-100.w-100(src='./images/stylistdp/1.jpg', name='profile-picture')
+                                .col-md-4
+                                    .card-block
+                                        h4(name='title').card-title Emma Roberts
+                                        a.btn.btn-dark.disabled(href='#') Hair Stylist
+                                        h6.my-2(name='rating').card-title 4/5.0
+                                        a.btn.btn-success.w-100.my-2.rounded.text-white(name='view', type='submit') View
+                                        a.btn.btn-success.w-100.rounded-0.text-white Book now
+                                .col-md-4
+                                    .card-block
+                                        h6(name='type').card-title Full Day
+                                        a.btn.btn-dark.disabled(href='#') LKR2000
+                                        h6(name='type').card-title Half Day/Morning
+                                        a.btn.btn-dark.disabled(href='#') LKR1200
+                                        h6(name='type').card-title Half Day/Evening
+                                        a.btn.btn-dark.disabled(href='#') LKR1500
+
+
+
 
 

@@ -3,22 +3,15 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 var app = express();
 
-/* GET home page. */
-//router.get('/', function(req, res, next) {
-//  res.render('index', { title: 'Style Market' });
-//});
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Style Market' });
+});
 
 app.use(bodyParser());
 
-app.get('/', function(req, res, next){
-  res.sendFile('index.pug', {root: path.join(__dirname, './views')});
-});
-
-app.post('/')
-
-router.get('/search',function (req, res) {
-  var type = req.body.styleType;
-  res.json({message: 'Hello world hello'} );
+router.post('/search',function (req, res) {
+    res.render('search');
+    console.log("Data passed");
 });
 
 module.exports = router;

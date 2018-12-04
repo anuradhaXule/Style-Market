@@ -35,7 +35,7 @@ block content
 
 
     .d-flex.flex-column.flex-md-row.align-items-center.p-2.px-md-2.mb-3.bg-gray.border-bottom.shadow-sm.h-md-250
-        form.form-find(action='/search', method="get")
+        form.form-find(action='/search', method="post")
             .input-group
                 select(name='styleType')#inputGroupSelect04.custom-select.w-25
                     option(selected='') What type of freelancer?
@@ -57,7 +57,7 @@ block content
                     option(value='2') Half day-Morning
                     option(value='3') Half day-Evening
                 .input-group-append
-                    button.btn.btn-primary.w-100.w-25(type='submit',name='find') Find
+                    button.btn.btn-primary.w-100.w-25(type='submit') Find
 
     .jumbotron.p-3.p-md-5.text-white.bg-info.rounded-0
         .col-md-6.px-0
@@ -76,7 +76,7 @@ block content
                 h5.card-title Find Stylists
                 p.card-text
                     | Search and find your best match
-                button.btn.btn-success.active(onclick="window.location.href='/howthis'") Read more
+                button.btn.btn-success.active(onclick="window.location.href='/search'") Read more
         .card(style='width: 25%;')
             img.card-img-top(src='/images/stylist.jpg', alt='Card image cap')
             .card-body
