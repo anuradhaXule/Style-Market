@@ -1,17 +1,23 @@
 var express = require('express');
+const {stylist} = require('sequelize');
 var router = express.Router();
 var bodyParser = require('body-parser');
 var app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Style Market' });
 });
 
-app.use(bodyParser());
-
 router.post('/search',function (req, res) {
-    res.render('search');
-    console.log("Data passed");
+    var stype = req.body.stype;
+    var city = req.body.city;
+    var sessiondate = req.body.date;
+    var sessiontype = req.body.setype;
+    res.send(stype);
+    //search.primarySearch(req,res);
 });
 
 module.exports = router;

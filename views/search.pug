@@ -3,49 +3,50 @@ extends layout
 block content
 
     .d-flex.flex-column.flex-md-row.align-items-center.p-2.px-md-2.mb-3.bg-gray.border-bottom.shadow-sm.h-md-250
-        form(action='/adv-search', method='post')
+        form
             .input-group
-                select(name='sty-type')#inputGroupSelect04.custom-select
+                select#inputGroupSelect04.custom-select
                     option(selected='') What type of freelancer?
-                    option(value='1') Hair stylist
-                    option(value='2') Style Educator
-                    option(value='3') Assistant
+                    option Hair stylist
+                    option Style Educator
+                    option Assistant
                 .input-group-append
-                select(name='location')#inputGroupSelect04.custom-select
+                select#inputGroupSelect04.custom-select
                     option(selected='') Which location?
-                    option(value='1') Kandy
-                    option(value='2') Colombo
-                    option(value='3') Galle
+                    option Kandy
+                    option Colombo
+                    option Galle
                 .input-group-append
 
                 .input-group-append
-                select(name='sessionl')#inputGroupSelect04.custom-select
+                select#inputGroupSelect04.custom-select
                     option(selected='') Required session length?
-                    option(value='1') Full day
-                    option(value='2') Half day-Morning
-                    option(value='3') Half day-Evening
+                    option Full day
+                    option Half day-Morning
+                    option Half day-Evening
                 .input-group-append
-                    button.btn.btn-primary.w-25(type='submit') Find
+                    button.btn.btn-primary.w-25 Find
 
 
-    .container.my-1.p-2.mx-0.position-fixed
+    .container-flex.my-1.p-2.mx-0
         .row
+
             .col-sm-4.w-25
-                form
+                form(action='/search', method="post")
                     .form-group
                         h6 Stylist Type
                         select(name='stylist-type')#inputGroupSelect04.custom-select
                             option(selected='') What type of freelancer?
-                            option(value='1') Hair stylist
-                            option(value='2') Style Educator
-                            option(value='3') Assistant
+                            option Hair stylist
+                            option Style Educator
+                            option Assistant
                     .form-group
                         h6 Location
                         select(name='location')#inputGroupSelect04.custom-select
                             option(selected='') Which location?
-                            option(value='1') Kandy
-                            option(value='2') Colombo
-                            option(value='3') Galle
+                            option Kandy
+                            option Colombo
+                            option Galle
                     .form-group
                         h6 Date
                         input(type='date', name='date')#inputGroupSelect04.custom-select
@@ -53,16 +54,16 @@ block content
                         h6 Session Length
                         select(name='session-length')#inputGroupSelect04.custom-select
                             option(selected='') Required session length?
-                            option(value='1') Full day
-                            option(value='2') Half day-Morning
-                            option(value='3') Half day-Evening
+                            option Full day
+                            option Half day-Morning
+                            option Half day-Evening
                     .form-group
                         h6 Skill
                         select(name='skill')#inputGroupSelect04.custom-select
                             option(selected='') Required session skill?
-                            option(value='1') Hair Cuts
-                            option(value='2') Teaching
-                            option(value='3') Coloring
+                            option Hair Cuts
+                            option Teaching
+                            option Coloring
                     .form-group
                         h6 Payment Rate
                         .row
@@ -74,51 +75,53 @@ block content
                         h6 Gender
                         select(name='gender')#inputGroupSelect04.custom-select
                             option(selected='') Gender?
-                            option(value='1') Male
-                            option(value='2') Female
-                            option(value='3') Any
+                            option Male
+                            option Female
+                            option Any
                     .form-group
                         h6 Experienced
                         select(name='experience-level')#inputGroupSelect04.custom-select
                             option(selected='') Experienced level?
-                            option(value='1') Qualified
-                            option(value='2') Average qualified
-                            option(value='3') Beginner
+                            option Qualified
+                            option Average qualified
+                            option Beginner
 
                     .form-group
                         h6 Rating
                         select#inputGroupSelect04.custom-select
                             option(selected='') Rating?
-                            option(value='1') 1
-                            option(value='2') 2
-                            option(value='3') 3
-                            option(value='3') 4
-                            option(value='3') 5
+                            option 1
+                            option 2
+                            option 3
+                            option 4
+                            option 5
 
                     button.btn.btn-primary.w-100.my-4(type='submit') Submit
 
 
-                .col-sm-8.w-75
+            .col-sm-8.w-75
+                form(action='/profile', method="post")
                     .row
                         .card.col-md-16.p-3
                             .row
                                 .col-md-4
-                                    img.h-100.w-100(src='./images/stylistdp/1.jpg', name='profile-picture')
+                                    img.h-100.w-100(src='./images/stylistdp/5.jpg', name='profile-picture')
                                 .col-md-4
                                     .card-block
                                         h4(name='title').card-title Emma Roberts
-                                        a.btn.btn-dark.disabled(href='#') Hair Stylist
+                                        a.btn.btn-dark.disabled.text-white(name='stytype') Hair Stylist
                                         h6.my-2(name='rating').card-title 4/5.0
-                                        a.btn.btn-success.w-100.my-2.rounded.text-white(name='view', type='submit') View
-                                        a.btn.btn-success.w-100.rounded-0.text-white Book now
+                                        button.btn.btn-success.w-100.my-2.rounded.text-white(name='view', type='submit') View
+                                        button.btn.btn-success.w-100.rounded-0.text-white Book now
                                 .col-md-4
                                     .card-block
-                                        h6(name='type').card-title Full Day
-                                        a.btn.btn-dark.disabled(href='#') LKR2000
-                                        h6(name='type').card-title Half Day/Morning
-                                        a.btn.btn-dark.disabled(href='#') LKR1200
-                                        h6(name='type').card-title Half Day/Evening
-                                        a.btn.btn-dark.disabled(href='#') LKR1500
+                                        h6.card-title Full Day
+                                        a.btn.btn-dark.disabled.text-white(name='fd') LKR2000
+                                        h6.card-title Half Day/Morning
+                                        a.btn.btn-dark.disabled.text-white(name='hdm') LKR1200
+                                        h6.card-title Half Day/Evening
+                                        a.btn.btn-dark.disabled.text-white(name='hde') LKR1500
+
 
 
 

@@ -4,23 +4,23 @@ block content
         .input-group
             select#inputGroupSelect04.custom-select
                 option(selected='') What type of freelancer?
-                option(value='1') Hair stylist
-                option(value='2') Style Educator
-                option(value='3') Assistant
+                option Hair stylist
+                option Style Educator
+                option Assistant
             .input-group-append
             select#inputGroupSelect04.custom-select
-                option(selected='') Which location?
-                option(value='1') Kandy
-                option(value='2') Colombo
-                option(value='3') Galle
+                option Which location?
+                option Kandy
+                option Colombo
+                option Galle
             .input-group-append
 
             .input-group-append
             select#inputGroupSelect04.custom-select
                 option(selected='') Required session length?
-                option(value='1') Full day
-                option(value='2') Half day-Morning
-                option(value='3') Half day-Evening
+                option Full day
+                option Half day-Morning
+                option Half day-Evening
             .input-group-append
                 button.btn.btn-primary.active(type='button') Find
 
@@ -37,25 +37,25 @@ block content
     .d-flex.flex-column.flex-md-row.align-items-center.p-2.px-md-2.mb-3.bg-gray.border-bottom.shadow-sm.h-md-250
         form.form-find(action='/search', method="post")
             .input-group
-                select(name='styleType')#inputGroupSelect04.custom-select.w-25
+                select(name='stype', required='')#inputGroupSelect04.custom-select.w-25
                     option(selected='') What type of freelancer?
-                    option(value='1') Hair stylist
-                    option(value='2') Style Educator
-                    option(value='3') Assistant
+                    option Hair stylist
+                    option Style Educator
+                    option Assistant
                 .input-group-append
-                select(name='location')#inputGroupSelect04.custom-select.mx-2.w-auto
+                select(name='city')#inputGroupSelect04.custom-select.mx-2.w-auto
                     option(selected='') Which location?
-                    option(value='1') Kandy
-                    option(value='2') Colombo
-                    option(value='3') Galle
+                    option Kandy
+                    option Colombo
+                    option Galle
                 .input-group-append
                     input(type='date', name='date')#inputGroupSelect04.custom-select.mx-2.rounded-0
                 .input-group-append
-                select(name='session-length')#inputGroupSelect04.custom-select.mx-2.w-auto
+                select(name='setype')#inputGroupSelect04.custom-select.mx-2.w-auto
                     option(selected='') Session length?
-                    option(value='1') Full day
-                    option(value='2') Half day-Morning
-                    option(value='3') Half day-Evening
+                    option Full day
+                    option Half day-Morning
+                    option Half day-Evening
                 .input-group-append
                     button.btn.btn-primary.w-100.w-25(type='submit') Find
 
