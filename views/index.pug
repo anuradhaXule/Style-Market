@@ -102,42 +102,17 @@ block content
         h3(style='marginTop:10px').mx-4 Top Rated Style Marketers
 
     .card-group.p-5
-        .card(style='width: 25%;')
+        each val in stylists
+            .card(style='width: 25%;')
 
-            .card-body
-                h5.card-title Anuradha Kulathunge
-                H6(name='stylist-rating') 4/5.0
-                img.card-img-top(src='/images/stylistdp/5.jpg', alt='Card image cap', style='height:25px,width:25px')
-                p.card-text
-                    H5.text-lg-center(name='stylist-type') Style Educator
-                button.btn.btn-default.active.w-100(type='button', onclick="window.location.href='/profile'") View
-        .card(style='width: 25%;')
+                .card-body
+                    h5.card-title Anuradha Kulathunge
+                    H6(name='stylist-rating') 4/5.0
+                    img.card-img-top(src='/images/stylistdp/5.jpg', alt='Card image cap', style='height:25px,width:25px')
+                    p.card-text
+                        H5.text-lg-center(name='stylist-type') Style Educator
+                    button.btn.btn-default.active.w-100(type='button', onclick="window.location.href='/profile'") View
 
-            .card-body
-                h5.card-title Dusvin Jayasekara
-                H6(name='stylist-rating') 4/5.0
-                img.card-img-top(src='/images/stylistdp/3.jpg', alt='Card image cap', style='height:25px,width:25px')
-                p.card-text
-                    H5.text-lg-center(name='stylist-type') Hair Stylist
-                button.btn.btn-default.active.w-100(type='button') View
-        .card(style='width: 25%;')
-
-            .card-body
-                h5.card-title Sathsara Perera
-                H6(name='stylist-rating') 4/5.0
-                img.card-img-top(src='/images/stylistdp/2.jpeg', alt='Card image cap', style='height:25px,width:25px')
-                p.card-text
-                    H5.text-lg-center(name='stylist-type') Hair Stylist
-                button.btn.btn-default.active.w-100(type='button') View
-        .card(style='width: 25%;')
-
-            .card-body
-                h5.card-title Dasun Kasthuri
-                H6(name='stylist-rating') 4/5.0
-                img.card-img-top(src='/images/stylistdp/7.jpg', alt='Card image cap', style='height:25px,width:25px')
-                p.card-text
-                    H5.text-lg-center(name='stylist-type') Assistant
-                button.btn.btn-default.active.w-100(type='button') View
     #accordion
         .card
             #headingOne.card-header
