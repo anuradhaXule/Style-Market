@@ -106,11 +106,12 @@ block content
             .card(style='width: 25%;')
 
                 .card-body
-                    h5.card-title Anuradha Kulathunge
-                    H6(name='stylist-rating') 4/5.0
-                    img.card-img-top(src='/images/stylistdp/5.jpg', alt='Card image cap', style='height:25px,width:25px')
+                    h5.card-title #{val.name}
+                    H6(name='stylist-rating')
+                        span.badge.badge-primary #{val.rating}/5.0
+                    img.card-img-top(src='/images/stylistdp/' + val.id + '.jpg', alt='Card image cap', style='height:25px,width:25px')
                     p.card-text
-                        H5.text-lg-center(name='stylist-type') Style Educator
+                        H5.text-lg-center(name='stylist-type') #{val.type}
                     button.btn.btn-default.active.w-100(type='button', onclick="window.location.href='/profile'") View
 
     #accordion

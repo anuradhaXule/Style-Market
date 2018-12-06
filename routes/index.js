@@ -12,19 +12,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 router.get('/', function(req, res, next) {
     db.stylist.findAll({
-            // where :{city:sendObj.location,type: sendObj.category, country:sendObj.gender}
         order: [
             ['rating', 'DESC']
         ],
         limit:5
-            }
-        /* attributes: ['id','firstName', 'lastName', 'city','country'],
-         include: [{
-             model: db.Rate,
-             where: {city: city}
-         }, db.Skil, db.Image, db.Price]
-     }*/
-    ).then( (result) => {
+
+    }).then( (result) => {
             if(result!== null){
                 res.render('index', {stylists: result})
             }

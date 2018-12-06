@@ -30,74 +30,75 @@ block content
 
     //=========================================================================================================================
 
-    .container-flex.my-1.p-2.mx-0
+    .container-flex.my-1.p-4.mx-0.py-0
         .row
             .col-sm-4.w-25
-                form(action='/search', method="post")
-                    .form-group
-                        h6 Stylist Type
-                        select(name='stylist-type')#inputGroupSelect04.custom-select
-                            option(selected=' ') What type of Stylemarketer?
-                            option Hair stylist
-                            option Style Educator
-                            option Assistant
-                    .form-group
-                        h6 Location
-                        select(name='location')#inputGroupSelect04.custom-select
-                            option(selected='') Which location?
-                            option Kandy
-                            option Colombo
-                            option Galle
-                    .form-group
-                        h6 Date
-                        input(type='date', name='date')#inputGroupSelect04.custom-select
-                    .form-group
-                        h6 Session Length
-                        select(name='session-length')#inputGroupSelect04.custom-select
-                            option(selected='') Required session length?
-                            option Full day
-                            option Half day-Morning
-                            option Half day-Evening
-                    .form-group
-                        h6 Skill
-                        select(name='skill')#inputGroupSelect04.custom-select
-                            option(selected='') Required session skill?
-                            option Hair Cuts
-                            option Teaching
-                            option Coloring
-                    .form-group
-                        h6 Payment Rate
-                        .row
-                            .col-sm-6
-                                input#exampleInputPassword1.form-control(type='number', placeholder='Minimum', name='min')
-                            .col-sm-6
-                                input#exampleInputPassword1.form-control(type='number', placeholder='Maximum', name='max')
-                    .form-group
-                        h6 Gender
-                        select(name='gender')#inputGroupSelect04.custom-select
-                            option(selected='') Gender?
-                            option Male
-                            option Female
-                            option Any
-                    .form-group
-                        h6 Experienced
-                        select(name='experience-level')#inputGroupSelect04.custom-select
-                            option(selected='') Experienced level?
-                            option Qualified
-                            option Average qualified
-                            option Beginner
+                each val in stylists
+                    form(action='/search', method="post")
+                        .form-group
+                            h6 Stylist Type
+                            select(name='stylist-type')#inputGroupSelect04.custom-select
+                                option(selected='') #{val.type}
+                                option Hair stylist
+                                option Style Educator
+                                option Assistant
+                        .form-group
+                            h6 Location
+                            select(name='location')#inputGroupSelect04.custom-select
+                                option(selected='') #{val.city}
+                                option Kandy
+                                option Colombo
+                                option Galle
+                        .form-group
+                            h6 Date
+                            input(type='date', name='date', value='#{val.date}')#inputGroupSelect04.custom-select
+                        .form-group
+                            h6 Session Length
+                            select(name='session-length')#inputGroupSelect04.custom-select
+                                option(selected='') #{val.}
+                                option Full day
+                                option Half day-Morning
+                                option Half day-Evening
+                        .form-group
+                            h6 Skill
+                            select(name='skill')#inputGroupSelect04.custom-select
+                                option(selected='') Required session skill?
+                                option Hair Cuts
+                                option Teaching
+                                option Coloring
+                        .form-group
+                            h6 Payment Rate
+                            .row
+                                .col-sm-6
+                                    input#exampleInputPassword1.form-control(type='number', placeholder='Minimum', name='min')
+                                .col-sm-6
+                                    input#exampleInputPassword1.form-control(type='number', placeholder='Maximum', name='max')
+                        .form-group
+                            h6 Gender
+                            select(name='gender')#inputGroupSelect04.custom-select
+                                option(selected='') Gender?
+                                option Male
+                                option Female
+                                option Any
+                        .form-group
+                            h6 Experienced
+                            select(name='experience-level')#inputGroupSelect04.custom-select
+                                option(selected='') Experienced level?
+                                option Qualified
+                                option Average qualified
+                                option Beginner
 
-                    .form-group
-                        h6 Rating
-                        select#inputGroupSelect04.custom-select
-                            option(selected='') Rating?
-                            option 1
-                            option 2
-                            option 3
-                            option 4
-                            option 5
+                        .form-group
+                            h6 Rating
+                            select#inputGroupSelect04.custom-select
+                                option(selected='') Rating?
+                                option 1
+                                option 2
+                                option 3
+                                option 4
+                                option 5
 
-                    button.btn.btn-primary.w-100.my-4(type='submit') Submit
+                        button.btn.btn-primary.w-100.my-4(type='submit') Submit
 
 
             .col-sm-8.w-75
@@ -107,7 +108,7 @@ block content
                             .card.col-md-16.p-3
                                 .row
                                     .col-md-4
-                                        img.w-100.h-100(src='./images/stylistdp/1.jpg' name='profile-picture')
+                                        img.w-100.h-100(src='./images/stylistdp/' + val.id + '.jpg' name='profile-picture')
                                     .col-md-4
                                         .card-block.mx-0
                                             h4(name='title').card-title #{val.name}

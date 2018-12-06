@@ -20,8 +20,10 @@ router.post('/',function (req, res) {
     db.stylist.findAll({
             // where :{city:sendObj.location,type: sendObj.category, country:sendObj.gender}
             where: {
-                [Op.or]: [{type: stype},{}]
-            }}
+                [Op.or]: [{type: " "},{}]
+            }
+
+    }
         /* attributes: ['id','firstName', 'lastName', 'city','country'],
          include: [{
              model: db.Rate,
