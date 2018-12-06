@@ -1,110 +1,151 @@
 extends layout
 
 block content
-    .container.emp-profile
-        form(method='post')
-            .row
-                .col-md-4
-                    .profile-img
-                        img(src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog', alt='')
-                        .file.btn.btn-lg.btn-primary
-                            | Change Photo
-                            input(type='file', name='file')
-                .col-md-6
-                    .profile-head
-                        h5
-                            | Kshiti Ghelani
-                        h6
-                            | Web Developer and Designer
-                        p.proile-rating
-                            | RANKINGS :
-                            span 8/10
-                        ul#myTab.nav.nav-tabs(role='tablist')
-                            li.nav-item
-                                a#home-tab.nav-link.active(data-toggle='tab', href='#home', role='tab', aria-controls='home', aria-selected='true') About
-                            li.nav-item
-                                a#profile-tab.nav-link(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false') Timeline
-                .col-md-2
-                    input.profile-edit-btn(type='submit', name='btnAddMore', value='Edit Profile')
-            .row
-                .col-md-4
-                    .profile-work
-                        p WORK LINK
-                        a(href='') Website Link
-                        br
-                        a(href='') Bootsnipp Profile
-                        br
-                        a(href='') Bootply Profile
-                        p SKILLS
-                        a(href='') Web Designer
-                        br
-                        a(href='') Web Developer
-                        br
-                        a(href='') WordPress
-                        br
-                        a(href='') WooCommerce
-                        br
-                        a(href='') PHP, .Net
-                        br
-                .col-md-8
-                    #myTabContent.tab-content.profile-tab
-                        #home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
+
+    .d-flex.flex-column.flex-md-row.align-items-center.p-2.px-md-2.mb-3.bg-gray.border-bottom.shadow-sm.h-md-250
+        form
+            .input-group
+                select#inputGroupSelect04.custom-select
+                    option(selected='') What type of freelancer?
+                    option Hair stylist
+                    option Style Educator
+                    option Assistant
+                .input-group-append
+                select#inputGroupSelect04.custom-select
+                    option(selected='') Which location?
+                    option Kandy
+                    option Colombo
+                    option Galle
+                .input-group-append
+
+                .input-group-append
+                select#inputGroupSelect04.custom-select
+                    option(selected='') Required session length?
+                    option Full day
+                    option Half day-Morning
+                    option Half day-Evening
+                .input-group-append
+                    button.btn.btn-primary.w-25 Find
+
+    //====================================================================================================================================================
+
+    .container-flex.mx-0
+        .row
+            .col-md-3.w-25
+                .card-body
+                    img.w-100.h-100(src='./images/stylistdp/5.jpg', name='profile-picture')
+                    hr
+                    h3(name='stylist-name') Anuradha Kulathunge
+                    .card-group
+                        h6.bg-success.rounded.text-white.p-2(name='stylist-rating') 4 / 5.0
+                        h5.mx-4(name='stylist-location') Kandy
+
+                    hr
+                    h6.card-title Full Day
+                    a.btn.btn-dark.disabled.text-white.w-100(name='fd') LKR 2000
+                    h6.card-title.my-2 Half Day/Morning
+                    a.btn.btn-dark.disabled.text-white.w-100(name='hdm') LKR 1200
+                    h6.card-title.my-2 Half Day/Evening
+                    a.btn.btn-dark.disabled.text-white.w-100(name='hde') LKR 1500
+                    hr
+
+
+            .col-md-9.w-75
+                .row
+                    .jumbotron.h-100.text-white.bg-info.rounded-0.my-4.mx-0
+                        .col-md-10
+                            h1(stylist-name).display-6.font-italic Anuradha Kulathunge
+                            p.lead.my-8
+                                | Anuradha Kulathunge has worked professionally as a hair designer and stylist for over 25 years. He launched a successful career working with Allen Edwards Salon for the first 8 years, followed by nine years at Salon Gregories in Newport Beach, then onto Gods & Heros Salon at South Coast Metro and Newport Beach at Armando Joshua Christopher Salon on Pacific Coast Highway and now at True Hair at Polished Perfect in Newport Mesa area on the corner of 17th St. and Newport Blvd.
+                            .btn-group.mx-0
+                                .btn
+                                    button.btn.btn-primary(onclick="window.location.href='/howthis'") Book Now
+                                .btn
+                                    button.btn.btn-primary(onclick="window.location.href='/howthis'") Add Favourites
+
+                .container-flex
+                    .row.alert-secondary
+                        .col-md-9
                             .row
-                                .col-md-6
-                                    label User Id
-                                .col-md-6
-                                    p Kshiti123
-                            .row
-                                .col-md-6
-                                    label Name
-                                .col-md-6
-                                    p Kshiti Ghelani
-                            .row
-                                .col-md-6
-                                    label Email
-                                .col-md-6
-                                    p kshitighelani@gmail.com
-                            .row
-                                .col-md-6
-                                    label Phone
-                                .col-md-6
-                                    p 123 456 7890
-                            .row
-                                .col-md-6
-                                    label Profession
-                                .col-md-6
-                                    p Web Developer and Designer
-                        #profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab')
-                            .row
-                                .col-md-6
-                                    label Experience
-                                .col-md-6
-                                    p Expert
-                            .row
-                                .col-md-6
-                                    label Hourly Rate
-                                .col-md-6
-                                    p 10$/hr
-                            .row
-                                .col-md-6
-                                    label Total Projects
-                                .col-md-6
-                                    p 230
-                            .row
-                                .col-md-6
-                                    label English Level
-                                .col-md-6
-                                    p Expert
-                            .row
-                                .col-md-6
-                                    label Availability
-                                .col-md-6
-                                    p 6 months
-                            .row
-                                .col-md-12
-                                    label Your Bio
-                                    br
-                                    p Your detail description
+                                .jumbotron.h-100.text-gray.rounded-0.p-4
+                                    .col-10
+                                        h5 Services Offered
+                                        p Hair cut and blowdry
+                                        p Hair Tutorial
+                                        p Full head highlights
+                                        p Permanent colouring
+                                        p Organic colouring
+
+                                .jumbotron-flex.h-100.text-gray.rounded-0.p-4
+                                    .col-10
+                                        h5 Achievements
+                                        p Top Hairstylist of Orange County - "Making The Cut" 2014 Competition
+                                        p Top Hairstylist Of Southern California - " Making the Cut " 2015
+
+
+
+                        .col-md-3.w-25.mx-0
+                            .card-body.mx-0
+                                table.table.table-bordered.table-style.table-responsive.w-100
+                                    tbody
+                                        tr
+                                            th(colspan='2')
+                                                a(href='?ym=<?php echo $prev; ?>')
+                                                    span.glyphicon.glyphicon-chevron-left
+                                            th(colspan='3')
+                                                | December
+                                            th(colspan='2')
+                                                a(href='?ym=<?php echo $next; ?>')
+                                                    span.glyphicon.glyphicon-chevron-right
+                                        tr
+                                            th S
+                                            th S
+                                            th M
+                                            th T
+                                            th W
+                                            th T
+                                            th F
+                                        tr
+                                            td 1
+                                            td 2
+                                            td 3
+                                            td 4
+                                            td 5
+                                            td 6
+                                            td.bg-danger 7
+                                        tr
+                                            td 8
+                                            td 9
+                                            td.bg-warning 10
+                                            td.bg-warning 11
+                                            td.bg-danger 12
+                                            td.bg-warning 13
+                                            td 14
+                                        tr.btn-success
+                                            td 15
+                                            td 16
+                                            td.bg-warning 17
+                                            td.bg-warning 18
+                                            td.bg-warning 19
+                                            td.bg-warning 20
+                                            td 21
+                                        tr
+                                            td.btn-success 22
+                                            td.btn-success 23
+                                            td.btn-success 25
+                                            td.bg-danger 26
+                                            td.bg-danger 27
+                                            td 28
+                                        tr
+                                            td 29
+                                            td 30
+                                            td 31
+                                            td
+                                            td
+                                            td
+                                            td
+
+
 
 
 

@@ -28,15 +28,16 @@ block content
                     button.btn.btn-primary.w-25 Find
 
 
+    //=========================================================================================================================
+
     .container-flex.my-1.p-2.mx-0
         .row
-
             .col-sm-4.w-25
                 form(action='/search', method="post")
                     .form-group
                         h6 Stylist Type
                         select(name='stylist-type')#inputGroupSelect04.custom-select
-                            option(selected='') What type of freelancer?
+                            option(selected=' ') What type of Stylemarketer?
                             option Hair stylist
                             option Style Educator
                             option Assistant
@@ -105,22 +106,22 @@ block content
                         .card.col-md-16.p-3
                             .row
                                 .col-md-4
-                                    img.h-100.w-100(src='./images/stylistdp/5.jpg', name='profile-picture')
+                                    img.w-100.h-100(src='./images/stylistdp/5.jpg', name='profile-picture')
                                 .col-md-4
+                                    .card-block.mx-0
+                                        h4(name='title').card-title Anuradha Kulathunge
+                                            span.badge.badge-primary.mx-2 4/5.0
+                                        a.btn.btn-dark.disabled.text-white(name='stytype') Style Educator
+                                        button.btn.btn-success.w-100.my-3.rounded.text-white(name='view', type='submit') View
+                                        button.btn.btn-success.w-100.text-white(onclick="window.location.href='/profile'") Book Now
+                                .col-md-4.my-2
                                     .card-block
-                                        h4(name='title').card-title Emma Roberts
-                                        a.btn.btn-dark.disabled.text-white(name='stytype') Hair Stylist
-                                        h6.my-2(name='rating').card-title 4/5.0
-                                        button.btn.btn-success.w-100.my-2.rounded.text-white(name='view', type='submit') View
-                                        button.btn.btn-success.w-100.rounded-0.text-white Book now
-                                .col-md-4
-                                    .card-block
-                                        h6.card-title Full Day
-                                        a.btn.btn-dark.disabled.text-white(name='fd') LKR2000
+                                        h6.card-title Full <Day></Day>
+                                        a.btn.btn-dark.disabled.text-white.w-75(name='fd') LKR2000
                                         h6.card-title Half Day/Morning
-                                        a.btn.btn-dark.disabled.text-white(name='hdm') LKR1200
+                                        a.btn.btn-dark.disabled.text-white.w-75(name='hdm') LKR1200
                                         h6.card-title Half Day/Evening
-                                        a.btn.btn-dark.disabled.text-white(name='hde') LKR1500
+                                        a.btn.btn-dark.disabled.text-white.w-75(name='hde') LKR1500
 
 
 
