@@ -33,12 +33,12 @@ block content
         .row
             .col-md-3.w-25
                 .card-body
-                    img.w-100.h-100(src='./images/stylistdp/5.jpg', name='profile-picture')
+                    img.w-100.h-100(src='./images/stylistdp/' + selected.id + '.jpg', name='profile-picture')
                     hr
-                    h3(name='stylist-name') Anuradha Kulathunge
+                    h3(name='stylist-name') #{selected.name}
                     .card-group
-                        h6.bg-success.rounded.text-white.p-2(name='stylist-rating') 4 / 5.0
-                        h5.mx-4(name='stylist-location') Kandy
+                        h6.bg-success.rounded.text-white.p-2(name='stylist-rating') #{selected.rating}/ 5.0
+                        h5.mx-4(name='stylist-location') #{selected.city}
 
                     hr
                     h6.card-title Full Day
@@ -54,9 +54,9 @@ block content
                 .row
                     .jumbotron.h-100.text-white.bg-info.rounded-0.my-4.mx-0
                         .col-md-10
-                            h1(stylist-name).display-6.font-italic Anuradha Kulathunge
+                            h1(stylist-name).display-6.font-italic #{selected.name}
                             p.lead.my-8
-                                | Anuradha Kulathunge has worked professionally as a hair designer and stylist for over 25 years. He launched a successful career working with Allen Edwards Salon for the first 8 years, followed by nine years at Salon Gregories in Newport Beach, then onto Gods & Heros Salon at South Coast Metro and Newport Beach at Armando Joshua Christopher Salon on Pacific Coast Highway and now at True Hair at Polished Perfect in Newport Mesa area on the corner of 17th St. and Newport Blvd.
+                                | #{selected.name} has worked professionally as a hair designer and stylist for over 25 years. He launched a successful career working with Allen Edwards Salon for the first 8 years, followed by nine years at Salon Gregories in Newport Beach, then onto Gods & Heros Salon at South Coast Metro and Newport Beach at Armando Joshua Christopher Salon on Pacific Coast Highway and now at True Hair at Polished Perfect in Newport Mesa area on the corner of 17th St. and Newport Blvd.
                             .btn-group.mx-0
                                 .btn
                                     button.btn.btn-primary(onclick="window.location.href='/howthis'") Book Now
